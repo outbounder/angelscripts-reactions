@@ -1,23 +1,30 @@
 {
-  "name": "angelabilities-reactions",
-  "version": "0.0.1",
+  "name": "angelscripts-reactions",
+  "version": "0.0.2",
   "description": "Adds support for scriptable reactions via angel dna",
   "main": "index.js",
   "dependencies": {
     "async": "~0.8.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "organic-angel": "0.2.10",
+    "chai": "~1.9.1",
+    "mocha": "~1.20.1"
+  },
+  "peerDependencies": {
+    "organic-angel": "0.2.10"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/outbounder/angelabilities-reactions.git"
+    "url": "git://github.com/outbounder/angelscripts-reactions.git"
   },
   "author": "Boris Filipov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/outbounder/angelabilities-reactions/issues"
+    "url": "https://github.com/outbounder/angelscripts-reactions/issues"
   },
-  "homepage": "https://github.com/outbounder/angelabilities-reactions"
+  "homepage": "https://github.com/outbounder/angelscripts-reactions"
 }

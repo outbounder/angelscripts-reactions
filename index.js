@@ -19,8 +19,8 @@ module.exports = function(angel) {
       angel.on(pattern, function(angel){
         async.each(reactionDNA["do"], function(cmd, next){
           angel.do(cmd, next)
-        }, function(){
-          // :?
+        }, function(err){
+          if(err) console.error(err)
         })
       })
       .example("r$ "+reactionDNA["do"])
