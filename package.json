@@ -1,6 +1,6 @@
 {
   "name": "angelscripts-reactions",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Adds support for scriptable reactions via angel dna",
   "main": "index.js",
   "dependencies": {
@@ -12,7 +12,7 @@
     "mocha": "~1.20.1"
   },
   "peerDependencies": {
-    "organic-angel": "0.2.10"
+    "organic-angel": "0.2.x"
   },
   "scripts": {
     "test": "mocha"
