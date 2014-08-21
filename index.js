@@ -1,4 +1,5 @@
 var async = require("async")
+var path = require("path")
 
 var angelListenAndEmit = function(angel, pattern) {
   return function(dna) {
@@ -12,6 +13,9 @@ var angelListenAndEmit = function(angel, pattern) {
 module.exports = function(angel) {
   for(var pattern in angel.angelDNA.reactions) {
     var reactionDNA = angel.angelDNA.reactions[pattern]
+    if(reactionDNA["run"]) {
+      angel.on(pattern, require(path.join(process.cwd(), reactionDNA["run"])))
+    }
     if(reactionDNA["emit"] && typeof reactionDNA["emit"] == "object") {
       angelListenAndEmit(angel, pattern)(reactionDNA["emit"])
     }
