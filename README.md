@@ -2,6 +2,15 @@
 
 Adds support for scriptable reactions via angel dna
 
+
+### reactions syntax
+
+    "reactions": {
+      "<command pattern>": {"emit": ChemicalBody},
+      "<command pattern>": {"do": ["command string"]},
+      "<command pattern>": {"run": "path/to/script"}
+    }
+
 ## angel dna
 
     {
@@ -18,14 +27,6 @@ Adds support for scriptable reactions via angel dna
           "run": "relative/to/cwd/angel/reaction/script"
         }
       }
-    }
-
-### reactions syntax
-
-    "reactions": {
-      "<command pattern>": {"emit": ChemicalBody},
-      "<command pattern>": {"do": "command string"},
-      "<command pattern>": {"run": "path/to/script"}
     }
 
 #### Given the above dna, angel used with command line
@@ -45,5 +46,5 @@ require's and executes `relative/to/cwd/angel/reaction/script`
 ### reaction script format
 
     module.exports = function(angel [, next]) {
-      // ...
+      // angel.cmdData...
     }

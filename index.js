@@ -21,7 +21,7 @@ module.exports = function(angel) {
     }
     if(reactionDNA["do"] && typeof reactionDNA["do"] == "object" && Array.isArray(reactionDNA["do"])) {
       angel.on(pattern, function(angel){
-        async.each(reactionDNA["do"], function(cmd, next){
+        async.eachSeries(reactionDNA["do"], function(cmd, next){
           angel.do(cmd, next)
         }, function(err){
           if(err) console.error(err)
