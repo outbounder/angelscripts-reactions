@@ -1,6 +1,6 @@
 {
   "name": "angelscripts-reactions",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Adds support for scriptable reactions via angel dna",
   "main": "index.js",
   "dependencies": {

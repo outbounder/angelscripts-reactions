@@ -3,8 +3,8 @@ var path = require("path")
 
 var angelListenAndEmit = function(angel, pattern) {
   return function(dna) {
-    angel.on(pattern, function(angel){
-      angel.plasma.emit(dna)
+    angel.on(pattern, function(angel, next){
+      angel.plasma.emit(dna, next)
     })
     .example("r$ "+pattern)
   }
